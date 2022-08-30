@@ -6,5 +6,6 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
-  projectId: "jwt3sm"
+  projectId: "jwt3sm",
+  videoUploadOnPasses: false
 });

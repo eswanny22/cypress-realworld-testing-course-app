@@ -16,7 +16,7 @@ describe("Newsletter Subscribe Form", () => {
       })
       
     it("does NOT allow already subscribed email addresses", () => {
-        cy.getByData("email-input").type("john@example.com")
+        cy.getByData("email-input").type("john@example.co")
         cy.getByData("submit-button").click()
         cy.getByData("server-error-message")
           .should("exist")
