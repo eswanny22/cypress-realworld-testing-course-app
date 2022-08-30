@@ -1,11 +1,14 @@
-import { defineConfig } from "cypress";
+import { defineConfig } from 'cypress'
 
+// need to install the "del" module as a dependency
+// npm i del --save-dev
 const del = require('del')
 
 export default defineConfig({
+  // setupNodeEvents can be defined in either
+  // the e2e or component configuration
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
       on('after:spec', (spec, results) => {
         if (results && results.stats.failures === 0 && results.video) {
           // `del()` returns a promise, so it's important to return it to ensure
@@ -13,7 +16,7 @@ export default defineConfig({
           return del(results.video)
         }
       })
-    },
+    }
   },
-  projectId: "jwt3sm",
-});
+  projectId: "jwt3sm"
+})
