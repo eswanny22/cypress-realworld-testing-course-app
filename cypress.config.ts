@@ -14,5 +14,4 @@ export default defineConfig({
     },
   },
   projectId: "jwt3sm",
-  videoUploadOnPasses: false
 });
