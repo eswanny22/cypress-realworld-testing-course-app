@@ -1,5 +1,7 @@
 import { defineConfig } from "cypress";
 
+const del = require('del')
+
 export default defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
